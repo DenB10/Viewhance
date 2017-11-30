@@ -3,34 +3,45 @@
 		{
 			"email": "tmnath2(at)gmail(dot)com",
 			"name": "Tmnath"
+		},
+		{
+			"name": "DenB"
 		}
 	],
 	"groupless": {
 		"appDescriptionShort": {
 			"#": 2,
-			">": "Des fonctionnalités additionnelles pour l’affichage des images et des vidéos de votre navigateur."
+			">": "Des fonctionnalités supplémentaires de visualisation des images et des vidéos dans le navigateur."
 		}
 	},
 	"options": {
 		"buttonReset": {
 			"#": 0,
-			">": "Par défaut"
+			">": "Réinitialiser"
 		},
 		"buttonSave": {
 			"#": 0,
-			">": "Sauvegarder"
+			">": "Enregistrer"
 		},
 		"centerContent": {
 			"#": 0,
-			">": "Centrer le contenu"
+			">": "Centrer l’image"
 		},
 		"customCss": {
 			"#": 0,
 			">": "Style personnalisé (CSS)"
 		},
+		"customCssTextareaPh": {
+			"#": 0,
+			">": "Modifier la couleur de fond et l’ombre ou la bordure de l’image, masquer les barres de défilement et le menu flottant, etc. \\nPlacer la souris au-dessus du point d’interrogation pour voir des exemples, utiliser le sélecteur de couleur ci-dessous pour obtenir le code des couleurs."
+		},
+		"customCssTip": {
+			"#": 1,
+			">": "<code>body {\\n background: #f3f3f5; /* Toute propriété d’arrière-plan valable (color, url(), gradient...). */\\n overflow: hidden; /* Masquer les barres de défilement ; pour les afficher, changer « hidden » en « auto ». */\\n}\\n\\n#media {\\n background: #eef; /* Arrière-plan différent pour l’image. */\\n border: 10px solid white; /* Bordure de l’image. */\\n box-shadow: 0 0 10px grey; /* Ombre de l’image. */\\n cursor: default !important; /* Interdire le changement de curseur. */\\n}\\n\\n.mask {\\n color: rgba(0, 0, 0, .4); /* Couleur du masque de zoom libre. */\\n}\\n\\n#menu {\\n display: none; /* Désactiver le menu flottant. */\\n}\\n</code>"
+		},
 		"defaultMode": {
 			"#": 0,
-			">": "Redimensionnement"
+			">": "Dimensionnement initial :"
 		},
 		"disabled": {
 			"#": 0,
@@ -38,11 +49,11 @@
 		},
 		"favicon": {
 			"#": 0,
-			">": "Favicon personnalisé"
+			">": "Favicon personnalisé  :"
 		},
 		"faviconTip": {
 			"#": 2,
-			">": "Cette option permet de choisir un icône personnalisé pour l'onglet de l'image ouverte.\nL'adresse de l'image peut être utilisée comme une variable : <b>%url</b>"
+			">": "Cette option permet de définir une icône d’onglet personnalisée pour l’image ouverte.\\nL’adresse de l’image peut être utilisée comme variable : <b>%url</b>."
 		},
 		"infoTranslations": {
 			"#": 1,
@@ -50,51 +61,67 @@
 		},
 		"longpressActionFitImage": {
 			"#": 0,
-			">": "adapter à la largeur/hauteur"
+			">": "ajustement en largeur ou hauteur"
+		},
+		"longpressActionWheelZoom": {
+			"#": 0,
+			">": "basculement de zoom à la souris"
 		},
 		"longpressLeft": {
 			"#": 0,
-			">": "Clic gauche prolongé"
+			">": "Action du clic gauche prolongé :"
 		},
 		"longpressRight": {
 			"#": 0,
-			">": "Clic droit prolongé"
+			">": "Action du clic droit prolongé :"
+		},
+		"mediaAttributes": {
+			"#": 1,
+			">": "Attributs vidéo :"
 		},
 		"mediaAttributesTip": {
 			"#": 1,
-			">": "Options possibles\n<b>autoplay</b> - la vidéo se lance automatiquement\n<b>loop</b> - répéter la vidéo\n<b>controls</b> - montrer les boutons du lecteur\n<b>muted</b> - rendre muet\n<b>volume=0-100</b> - volume par défaut (en pourcentage)"
+			">": "Attributs acceptés :\\n<b>autoplay</b> : lancement automatique ;\\n<b>loop</b> : lecture en boucle ;\\n<b>controls</b> : affichage des commandes ;\\n<b>muted</b> : muet ;\\n<b>volume=0-100</b> : volume par défaut (pourcentage)."
 		},
 		"mediaInfo": {
 			"#": 0,
-			">": "Détails de l'image"
+			">": "Informations sur l’image :"
+		},
+		"mediaInfoTip": {
+			"#": 3,
+			">": "Cette option permet de personnaliser les informations affichées dans le titre de l’onglet. Ces informations peuvent contenir les variables suivantes :\\n<b>%ow</b> : largeur originale ;\\n<b>%oh</b> : hauteur originale ;\\n<b>%ratio</b> : rapport largeur/hauteur actuel ;\\n<b>%w</b> : largeur actuelle ;\\n<b>%h</b> : hauteur actuelle ;\\n<b>%perc</b> : pourcentage de la taille originale ;\\n<b>%url</b> : URL complète ;\\n<b>%name</b> : nom de fichier ;\\n<b>%size</b> : taille de fichier formatée (peut ne pas fonctionner)."
 		},
 		"minUpscale": {
 			"#": 0,
-			">": "Agrandir les petites images"
+			">": "Redimensionnement des petites images :"
 		},
 		"minUpscaleTip": {
 			"#": 1,
-			">": "En temps normal, les petites images ne sont pas élargies à la taille de la fenêtre. Cette option les y force.\nLa valeur est un pourcentage, et indique au script d'élargir les images plus grandes qu'un certain pourcentage de la hauteur ou de la largeur de la fenêtre (en fonction de l'option choisie précédemment)."
+			">": "Cette option force le redimensionnement des petites images qui ne le sont normalement pas.\\nLes images dont les dimensions atteignent le pourcentage indiqué de la hauteur ou de la largeur (cela dépend de l’option précédente) de la fenêtre seront agrandies."
 		},
 		"modeAutoFit": {
 			"#": 0,
-			">": "réduire"
+			">": "automatique"
 		},
 		"modeBestFit": {
 			"#": 0,
-			">": "taille optimale"
+			">": "optimal"
 		},
 		"modeNatural": {
 			"#": 0,
-			">": "taille initiale"
+			">": "grandeur nature"
+		},
+		"navGeneral": {
+			"#": 1,
+			">": "Général"
 		},
 		"navInfo": {
 			"#": 0,
-			">": "Infos"
+			">": "Informations"
 		},
 		"opener": {
 			"#": 0,
-			">": "Ouvre les images des pages web classiques"
+			">": "Ouverture des images des pages web standard :"
 		},
 		"openerBoth": {
 			"#": 0,
@@ -110,43 +137,63 @@
 		},
 		"phClickForExample": {
 			"#": 1,
-			">": "cliquez pour avoir un exemple..."
+			">": "cliquer pour avoir des exemples…"
+		},
+		"scChangeVolume": {
+			"#": 0,
+			">": "Flèche <b>Haut / Bas</b> pour augmenter / diminuer le volume"
 		},
 		"scCycleModes": {
 			"#": 0,
-			">": "Faire défiler les différents modes : taille initiale, adapter à la largeur, adapter à la hauteur"
+			">": "Modes de redimensionnement en boucle (grandeur nature, ajustement en largeur, en hauteur)"
+		},
+		"scDragndrop": {
+			"#": 3,
+			">": "<b>Maintenir Ctrl ou Alt</b> pour glisser l’image ou tirer son bord droit si elle est ajustée à la fenêtre"
 		},
 		"scFlipHorizontal": {
 			"#": 0,
-			">": "Inverser horizontalement"
+			">": "Miroir horizontal"
 		},
 		"scFlipVertical": {
 			"#": 0,
-			">": "Inverser verticalement"
+			">": "Miroir vertical"
 		},
 		"scFloatMenu": {
 			"#": 0,
-			">": "Déplacez le curseur en haut à gauche de la page pour afficher le menu"
+			">": "Curseur de souris dans l’angle supérieur gauche de la page pour faire apparaître le menu"
 		},
 		"scFreeZoom": {
 			"#": 0,
-			">": "<b>Maj + glisser</b> sur l'image pour utiliser le zoom libre, maintenir <b>Ctrl</b> pour déplacer la sélection"
+			">": "<b>Maj + glisser</b> sur l’image pour utiliser le zoom libre, maintenir <b>Ctrl</b> pour déplacer la sélection"
 		},
 		"scHorizontalScroll": {
 			"#": 1,
-			">": "Pour faire défiler l'image horizontalement, utilisez la molette de la souris en bas à gauche"
+			">": "Molette de souris au-dessus de l’angle inférieur gauche pour faire défiler l’image horizontalement"
+		},
+		"scImgBg": {
+			"#": 0,
+			">": "Fonds en boucle (défaut, noir, blanc, carreaux), maintenir <b>Maj</b> pour personnaliser"
 		},
 		"scModeContain": {
 			"#": 0,
-			">": "Redimensionnement automatique"
+			">": "Ajustement automatique"
+		},
+		"scModeFill": {
+			"#": 0,
+			">": "Remplissage"
 		},
 		"scModeNatural": {
 			"#": 0,
-			">": "Taille initiale"
+			">": "Grandeur nature"
+		},
+		"scPixelate": {
+			"#": 0,
+			">": "Pixélisation"
 		},
 		"scReset": {
 			"#": 0,
-			">": "<b>Échap</b> ramènera l'image à sa taille initiale, ou sortira du zoom libre"
+			">": "<b>Échap</b> pour rétablir l’image dans son état initial ou pour quitter le zoom libre"
 		},
 		"scRotateLeft": {
 			"#": 0,
@@ -156,13 +203,21 @@
 			"#": 0,
 			">": "Rotation vers la droite"
 		},
+		"scTogglePlay": {
+			"#": 0,
+			">": "<b>Espace</b> pour lire ou mettre en pause"
+		},
+		"scWheelZoom": {
+			"#": 0,
+			">": "Basculement de zoom à la souris"
+		},
 		"scZoom": {
 			"#": 0,
-			">": "Zoom avant / arrière"
+			">": "pour zoomer en avant ou en arrière"
 		},
 		"sendTo": {
 			"#": 0,
-			">": "Envoyer l'image vers..."
+			">": "Envoi vers…"
 		},
 		"shortcuts": {
 			"#": 0,
@@ -170,7 +225,15 @@
 		},
 		"wheelZoom": {
 			"#": 0,
-			">": "Zoomer avec la molette"
+			">": "Zoomer avec la molette de la souris"
+		},
+		"zoomParams": {
+			"#": 0,
+			">": "Pas de grossissement et niveaux de zoom"
+		},
+		"zoomParamsTip": {
+			"#": 0,
+			">": "Format : <b>pas; niveau1 niveau2 niveau3</b>\\n<b>pas</b> : pas de grossissement de l’image par rapport à sa taille actuelle ; par exemple, <b>0.3</b> agrandit de 30 %, ce qui signifie que la taille obtenue sera 130 % de la taille actuelle.\\n<b>niveaux</b> (au minimum deux valeurs séparées par un espace) : niveaux de zoom appliqués à l’image d’origine ; par exemple, la suite 0.25 0.5 0.75 1 1.5 permet un zoom entre 25 % et 150 % et en dehors de ces valeur, le <i>facteur</i> est utilisé.\\nMaintenir <i>Alt</i> ou <i>Maj</b> en zoomant pour ignorer les niveaux de zoom."
 		}
 	}
 }
